@@ -4,7 +4,7 @@
 //SWOOLE_SOCK_TCP 是swoole自带的一个系统常量 创建tcp socket
 $client = new Swoole_client(SWOOLE_SOCK_TCP);
 
-if ($client->connect("127.0.0.1",9502)){
+if (!$client->connect("127.0.0.1",9502)){
     echo "连接失败";
     exit;
 }
